@@ -79,11 +79,13 @@ function scrape(text) {
 		creatorType: "author",
 		fieldMode: 1
 	});
-	newItem.creators.push({
-		lastName: dpaperJson.teacher_name[0],
-		creatorType: "contributor",
-		fieldMode: 1
-	});
+	for (let index = 0; index < dpaperJson.teacher_name.length; index++) {
+		newItem.creators.push({
+			lastName: dpaperJson.teacher_name[index],
+			creatorType: "contributor",
+			fieldMode: 1
+		});
+	}
 	newItem.abstractNote = dpaperJson.abstract_cn;
 	newItem.thesisType = dpaperJson.paper_type;
 	newItem.university = dpaperJson.training_institution[0];
