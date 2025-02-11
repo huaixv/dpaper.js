@@ -9,7 +9,7 @@
 	"inRepository": true,
 	"translatorType": 4,
 	"browserSupport": "gcsibv",
-	"lastUpdated": "2025-02-11 09:50:23"
+	"lastUpdated": "2025-02-11 10:02:44"
 }
 
 // web url
@@ -57,7 +57,7 @@ function doWeb(doc, url) {
 			if (!items) {
 				return;
 			}
-			ZU.doGet(items, scrape);
+			ZU.doGet(Object.keys(items), scrape);
 		});
 	}
 	else {
