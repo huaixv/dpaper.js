@@ -88,7 +88,7 @@ function scrape(text) {
 	}
 	newItem.abstractNote = dpaperJson.abstract_cn;
 	newItem.thesisType = dpaperJson.paper_type;
-	newItem.university = dpaperJson.training_institution[0];
+	newItem.university = dpaperJson.grant_institution;
 	newItem.place = dpaperJson.training_institution[0];
 	newItem.date = dpaperJson.education_grant_time_norm;
 	newItem.numPages = dpaperJson.page_count;
