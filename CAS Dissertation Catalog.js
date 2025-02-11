@@ -103,6 +103,7 @@ function scrape(text) {
 	newItem.callNumber = dpaperJson.cstr_str;
 	// missing field: rights
 	// missing field: extra
+	newItem.tags = dpaperJson.keyword_cn;
 
 	newItem.complete();
 }
