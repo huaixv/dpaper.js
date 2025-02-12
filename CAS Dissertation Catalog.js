@@ -9,7 +9,7 @@
 	"inRepository": true,
 	"translatorType": 4,
 	"browserSupport": "gcsibv",
-	"lastUpdated": "2025-02-11 10:02:44"
+	"lastUpdated": "2025-02-12 07:20:29"
 }
 
 // web url
@@ -24,7 +24,7 @@ function detectWeb(doc, url) {
 	if (thesisRegx.test(url)) {
 		return 'thesis';
 	}
-	var searchRegx = /\/Dpaper\/search\/searchResult\?searchText=/i;
+	var searchRegx = /\/Dpaper\/search\/searchResult\?/i;
 	if (searchRegx.test(url) && getSearchResults(doc, true)) {
 		return 'multiple';
 	}
