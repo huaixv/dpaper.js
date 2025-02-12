@@ -9,7 +9,7 @@
 	"inRepository": true,
 	"translatorType": 4,
 	"browserSupport": "gcsibv",
-	"lastUpdated": "2025-02-12 08:11:33"
+	"lastUpdated": "2025-02-12 08:59:21"
 }
 
 // web url
@@ -80,9 +80,9 @@ function scrape(text) {
 		fieldMode: 1
 	});
 	if (dpaperJson.teacher_name) {
-		for (const teacher_name of dpaperJson.teacher_name) {
+		for (const teacherName of dpaperJson.teacher_name) {
 			newItem.creators.push({
-				lastName: teacher_name,
+				lastName: teacherName,
 				creatorType: "contributor",
 				fieldMode: 1
 			});
@@ -109,6 +109,7 @@ function scrape(text) {
 
 	newItem.complete();
 }
+
 /** BEGIN TEST CASES **/
 var testCases = [
 	{
