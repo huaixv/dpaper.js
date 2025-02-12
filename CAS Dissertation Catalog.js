@@ -9,7 +9,7 @@
 	"inRepository": true,
 	"translatorType": 4,
 	"browserSupport": "gcsibv",
-	"lastUpdated": "2025-02-12 08:08:42"
+	"lastUpdated": "2025-02-12 08:11:33"
 }
 
 // web url
@@ -111,5 +111,50 @@ function scrape(text) {
 }
 /** BEGIN TEST CASES **/
 var testCases = [
+	{
+		"type": "web",
+		"url": "http://dpaper.las.ac.cn/",
+		"detectedItemType": false,
+		"items": []
+	},
+	{
+		"type": "web",
+		"url": "http://dpaper.las.ac.cn/Dpaper/search/searchResult?highsearch=training_institution_all:%E6%96%87%E7%8C%AE%E6%83%85%E6%8A%A5%E4%B8%AD%E5%BF%83",
+		"items": "multiple"
+	},
+	{
+		"type": "web",
+		"url": "http://dpaper.las.ac.cn/Dpaper/detail/detailNew?paperID=20201792",
+		"items": [
+			{
+				"itemType": "thesis",
+				"title": "科技文献自动标引试验",
+				"creators": [
+					{
+						"lastName": "晁芳",
+						"creatorType": "author",
+						"fieldMode": 1
+					}
+				],
+				"date": "1982-01-01",
+				"archive": "N80107",
+				"archiveLocation": "中国科学院文献情报中心",
+				"language": "chi",
+				"libraryCatalog": "CAS Dissertation Catalog",
+				"place": "中国科学院图书馆",
+				"university": "中国科学院研究生院",
+				"url": "http://dpaper.las.ac.cn/Dpaper/detail/detailNew?paperID=20201792",
+				"attachments": [
+					{
+						"title": "Snapshot",
+						"mimetype": "text/html"
+					}
+				],
+				"tags": [],
+				"notes": [],
+				"seeAlso": []
+			}
+		]
+	}
 ]
 /** END TEST CASES **/
