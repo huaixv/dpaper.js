@@ -9,7 +9,7 @@
 	"inRepository": true,
 	"translatorType": 4,
 	"browserSupport": "gcsibv",
-	"lastUpdated": "2025-02-12 07:20:29"
+	"lastUpdated": "2025-02-12 08:08:42"
 }
 
 // web url
@@ -79,12 +79,14 @@ function scrape(text) {
 		creatorType: "author",
 		fieldMode: 1
 	});
-	for (let index = 0; index < dpaperJson.teacher_name.length; index++) {
-		newItem.creators.push({
-			lastName: dpaperJson.teacher_name[index],
-			creatorType: "contributor",
-			fieldMode: 1
-		});
+	if (dpaperJson.teacher_name) {
+		for (const teacher_name of dpaperJson.teacher_name) {
+			newItem.creators.push({
+				lastName: teacher_name,
+				creatorType: "contributor",
+				fieldMode: 1
+			});
+		}
 	}
 	newItem.abstractNote = dpaperJson.abstract_cn;
 	newItem.thesisType = dpaperJson.paper_type;
